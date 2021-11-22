@@ -1,0 +1,17 @@
+archive () {
+   zip -r "$1".zip -i "$1" ;
+}
+
+function removehost() {
+   ssh-keygen -R "$1"
+}
+
+function weather() {
+   city="$1"
+
+   if [ -z "$city" ]; then
+      city="Antwerp"
+   fi
+
+   eval "curl http://wttr.in/${city}"
+}

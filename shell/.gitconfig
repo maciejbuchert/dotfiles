@@ -1,0 +1,8 @@
+[user]
+	name = Maciej Buchert
+[alias]
+	fc = !git fetch && git checkout
+[color]
+    ui = auto
+[init]
+	defaultBranch = master

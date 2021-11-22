@@ -1,0 +1,43 @@
+{
+  "default": {
+    "entry": "vertical",
+    "layout": [
+      [
+        [
+          "cd ~/Documents/projekty/literia",
+          "staging"
+        ],
+        [
+          "cd ~/Documents/projekty/literia && vagrant up && vagrant ssh",
+          ""
+        ]
+      ]
+    ]
+  },
+  "m2": {
+    "entry": "vertical",
+    "layout": [
+      [
+        [
+          "cd ~/Documents/projekty/literia_2",
+          "ssh -A -t mbuchert@$DEV_IP 'cd /home/mbuchert/workspace/literia2; bash -l'"
+        ],
+        [
+          "",
+          "ssh -A -t mbuchert@$TEST_IP 'cd /home/mbuchert/workspace/literia2; bash -l'"
+        ]
+      ]
+    ]
+  },
+  "prod": {
+    "entry": "vertical",
+    "layout": [
+      [
+        [
+          "prod-01 -t 'cd /var/www/html; bash'",
+          "prod-02 -t 'cd /var/www/html; bash'"
+        ]
+      ]
+    ]
+  }
+}
