@@ -46,4 +46,8 @@ ln -s $HOME/.dotfiles/shell/.zshrc $HOME/.zshrc
 rm -rf $HOME/.p10k.zsh
 ln -s $HOME/.dotfiles/shell/.p10k.zsh $HOME/.p10k.zsh
 
+# Removes .hyper.js from $HOME (if it exists) and symlinks the .hyper.js file from the .dotfiles
+rm -rf $HOME/.hyper.js
+ln -s $HOME/.dotfiles/shell/.hyper.js $HOME/.hyper.js
+
 ./macos/set_defaults.sh

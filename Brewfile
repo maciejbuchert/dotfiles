@@ -4,6 +4,7 @@ tap 'homebrew/cask-fonts'
 tap 'homebrew/cask-versions'
 tap 'homebrew/bundle'
 tap 'nicoverbruggen/homebrew-cask'
+tap 'homebrew/cask-fonts'
 
 # Binaries
 brew 'bash' # Latest Bash version
@@ -19,13 +20,13 @@ brew 'tree' # List directories in a tree structure
 
 # Development
 brew 'php'
-brew 'php@7.2'
 brew 'php@7.4'
 brew 'composer'
 brew 'mysql'
 brew 'node'
 brew 'yarn'
 brew 'npm'
+brew 'pv'
 
 # Apps
 cask '1password'
@@ -43,11 +44,12 @@ cask 'scroll-reverser'
 cask 'sublime-text'
 cask 'vanilla'
 cask 'virtualbox'
+cask 'eul'
 
 # Fonts
+cask 'font-fira-code'
 
 # Mac App Store
-mas 'Things', id: 904280696
 mas 'Amphetamine', id: 937984704
 
 brew services start mysql

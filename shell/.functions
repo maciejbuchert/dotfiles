@@ -10,8 +10,14 @@ function weather() {
    city="$1"
 
    if [ -z "$city" ]; then
-      city="Antwerp"
+      city="Jankowo 62-007"
    fi
 
-   eval "curl http://wttr.in/${city}"
+   city=$( printf "%s\n" "$city" | sed 's/ /%20/g' )
+
+   eval "curl --header \"Accept-Language: pl-PL,pl;\" http://wttr.in/${city}"
+}
+
+function notify() {
+   osascript -e 'display notification "Shell command executed" sound name "Submarine"'
 }

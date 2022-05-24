@@ -1,19 +1,16 @@
-# Bash
-alias l="ls -FGlAhp"
-alias path="echo -e ${PATH//:/\\n}"
+# PHP
+alias hostfile="sudo nano /etc/hosts"
+alias sshconfig="nano ~/.ssh/config"
+alias copykey="command cat ~/.ssh/id_rsa.pub | pbcopy"
+alias sphp80="brew unlink php@7.4 && brew link --overwrite --force php"
+alias sphp74="brew unlink php && brew link --overwrite --force php@7.4"
 
 # Git
 alias gc="git checkout"
 alias glog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 
-# Development
-alias hostfile="sudo nano /etc/hosts"
-alias sshconfig="nano ~/.ssh/config"
-alias copykey="command cat ~/.ssh/id_rsa.pub | pbcopy"
-
-# PHP
-alias sphp80="brew unlink php@7.4 && brew link --overwrite --force php"
-alias sphp74="brew unlink php && brew link --overwrite --force php@7.4"
+# List all files colorized in long format
+alias l="ls -laF"
 
 # PhpStorm
 #alias phpstorm='open -a /Applications/PhpStorm.app "`pwd`"'
@@ -24,7 +21,7 @@ alias hide="defaults write com.apple.finder AppleShowAllFiles -bool false && kil
 
 # IP addresses
 alias ip="curl https://diagnostic.opendns.com/myip ; echo"
-alias localip="ipconfig getifaddr en0 | awk '{ print \"Wifi: \" $1}' && ipconfig getifaddr en3 | awk '{ print \"LAN: \" $1}'"
+alias localip="ipconfig getifaddr en0 | awk '{ print \"Wifi: \" $1}'"
 
 # Flush Directory Service cache
 alias flushdns="sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder"

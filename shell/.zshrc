@@ -13,14 +13,12 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Hide username in prompt
 DEFAULT_USER=`whoami`
 
-ZSH_CUSTOM=$HOME/.dotfiles/misc/oh-my-zsh-custom
-
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git composer macos)
+plugins=(git composer)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -29,13 +27,6 @@ source $ZSH/oh-my-zsh.sh
 
 ZSH_DISABLE_COMPFIX=true
 
-# Load the shell dotfiles, and then some:
-# * ~/.dotfiles-custom can be used for other settings you don’t want to commit.
-for file in ~/.dotfiles/shell/.{exports,aliases,functions}; do
-	[ -r "$file" ] && [ -f "$file" ] && source "$file"
-done
-
-for file in ~/.dotfiles-custom/shell/.{exports,aliases,functions,zshrc}; do
-	[ -r "$file" ] && [ -f "$file" ] && source "$file"
-done
-unset file
+source ~/.aliases
+source ~/.functions
+[[ /usr/local/bin/kubectl ]] && source <(kubectl completion zsh)
