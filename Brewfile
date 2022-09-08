@@ -27,6 +27,7 @@ brew 'node'
 brew 'yarn'
 brew 'npm'
 brew 'pv'
+brew 'derailed/k9s/k9s'
 
 # Apps
 cask '1password'
@@ -42,14 +43,16 @@ cask 'pock'
 cask 'rocket'
 cask 'scroll-reverser'
 cask 'sublime-text'
-cask 'vanilla'
 cask 'virtualbox'
 cask 'eul'
+cask 'orion'
 
 # Fonts
 cask 'font-fira-code'
 
 # Mac App Store
 mas 'Amphetamine', id: 937984704
+mas 'Velja', id: 1607635845
+mas 'Jiffy', id: 1502527999
 
 brew services start mysql
