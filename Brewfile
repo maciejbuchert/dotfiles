@@ -28,6 +28,7 @@ brew 'yarn'
 brew 'npm'
 brew 'pv'
 brew 'derailed/k9s/k9s'
+brew 'devutils'
 
 # Apps
 cask '1password'
