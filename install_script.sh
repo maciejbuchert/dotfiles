@@ -13,6 +13,8 @@ fi
 # Check for Homebrew and install if we don't have it
 if test ! $(which brew); then
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  (echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> /Users/mbuchert/.zprofile
+  eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
 # Update Homebrew recipes
@@ -23,6 +25,7 @@ brew tap homebrew/bundle
 brew bundle
 
 # Add global gitignore
+rm -rf $HOME/.global-gitignore
 ln -s $HOME/.dotfiles/shell/.global-gitignore $HOME/.global-gitignore
 git config --global core.excludesfile $HOME/.global-gitignore
 
@@ -50,4 +53,12 @@ ln -s $HOME/.dotfiles/shell/.p10k.zsh $HOME/.p10k.zsh
 rm -rf $HOME/.hyper.js
 ln -s $HOME/.dotfiles/shell/.hyper.js $HOME/.hyper.js
 
+# Additional files symlinks
+rm -rf $HOME/.aliases
+ln -s $HOME/.dotfiles/shell/.aliases $HOME/
+
+rm -rf $HOME/.functions
+ln -s $HOME/.dotfiles/shell/.functions $HOME/
+
 ./macos/set_defaults.sh
+./macos/script_commands.sh

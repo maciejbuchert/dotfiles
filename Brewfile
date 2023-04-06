@@ -1,16 +1,19 @@
 # Taps
+tap 'homebrew/bundle'
 tap 'homebrew/cask'
 tap 'homebrew/cask-fonts'
-tap 'homebrew/cask-versions'
-tap 'homebrew/bundle'
-tap 'nicoverbruggen/homebrew-cask'
-tap 'homebrew/cask-fonts'
-tap 'nicoverbruggen/homebrew-cask'
+tap 'homebrew/core'
+tap 'homebrew/services'
+tap 'nicoverbruggen/cask'
+tap 'derailed/k9s'
+tap 'shivammathur/php'
 
 # Binaries
 brew 'bash' # Latest Bash version
 brew 'coreutils' # Those that come with macOS are outdated
 brew 'ffmpeg'
+brew 'htop'
+brew 'jq'
 brew 'git'
 brew 'grep'
 brew 'httpie'
@@ -18,11 +21,15 @@ brew 'pkg-config'
 brew 'wget'
 brew 'mas' # Mac App Store manager
 brew 'tree' # List directories in a tree structure
+brew 'curl'
 
 # Development
-brew 'php'
-brew 'php@7.4'
-brew 'php@8.1'
+brew 'php', restart_service: true, link: false
+brew 'shivammathur/php/php@5.6'
+brew 'shivammathur/php/php@7.4'
+brew 'php@8.1', link: true
+brew 'python@3.9'
+brew 'python@3.10'
 brew 'composer'
 brew 'mysql'
 brew 'node'
@@ -33,9 +40,11 @@ brew 'derailed/k9s/k9s'
 brew 'devutils'
 brew 'phpmon'
 brew 'postman'
+brew 'kubernetes-cli', link: false
 
 # Apps
 cask 'docker'
+cask 'docker-compose', link: false
 cask 'google-chrome'
 cask 'phpstorm'
 cask 'telegram-desktop'
