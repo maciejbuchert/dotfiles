@@ -4,7 +4,7 @@ tap 'homebrew/cask'
 tap 'homebrew/cask-fonts'
 tap 'homebrew/core'
 tap 'homebrew/services'
-tap 'nicoverbruggen/cask'
+tap 'nicoverbruggen/homebrew-cask'
 tap 'derailed/k9s'
 tap 'shivammathur/php'
 
@@ -22,6 +22,7 @@ brew 'wget'
 brew 'mas' # Mac App Store manager
 brew 'tree' # List directories in a tree structure
 brew 'curl'
+brew 'imagemagick'
 
 # Development
 brew 'php', restart_service: true, link: false
@@ -37,9 +38,6 @@ brew 'yarn'
 brew 'npm'
 brew 'pv'
 brew 'derailed/k9s/k9s'
-brew 'devutils'
-brew 'phpmon'
-brew 'postman'
 brew 'kubernetes-cli', link: false
 
 # Apps
@@ -47,7 +45,7 @@ cask 'docker'
 cask 'docker-compose', link: false
 cask 'google-chrome'
 cask 'phpstorm'
-cask 'telegram-desktop'
+cask 'telegram'
 cask 'raycast'
 cask 'spotify'
 cask 'hyper'
@@ -56,7 +54,9 @@ cask 'rocket'
 cask 'scroll-reverser'
 cask 'sublime-text'
 cask 'eul'
-cask 'orion'
+cask 'devutils'
+cask 'phpmon'
+cask 'postman'
 
 # Fonts
 cask 'font-fira-code'

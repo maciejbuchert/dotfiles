@@ -61,4 +61,3 @@ rm -rf $HOME/.functions
 ln -s $HOME/.dotfiles/shell/.functions $HOME/
 
 ./macos/set_defaults.sh
-./macos/script_commands.sh
