@@ -26,7 +26,7 @@ brew bundle
 
 # Add global gitignore
 rm -rf $HOME/.global-gitignore
-ln -s $HOME/.dotfiles/shell/.global-gitignore $HOME/.global-gitignore
+ln -s $HOME/dotfiles/shell/.global-gitignore $HOME/.global-gitignore
 git config --global core.excludesfile $HOME/.global-gitignore
 
 # Create a projects directory
@@ -37,27 +37,27 @@ git clone https://github.com/raycast/script-commands.git macos/script-commands
 
 ./macos/script_commands.sh
 
-# Removes .gitconfig from $HOME (if it exists) and symlinks the .gitconfig file from the .dotfiles
+# Removes .gitconfig from $HOME (if it exists) and symlinks the .gitconfig file from the dotfiles
 rm -rf $HOME/.gitconfig
-ln -s $HOME/.dotfiles/shell/.gitconfig $HOME/.gitconfig
+ln -s $HOME/dotfiles/shell/.gitconfig $HOME/.gitconfig
 
-# Removes .zshrc from $HOME (if it exists) and symlinks the .zshrc file from the .dotfiles
+# Removes .zshrc from $HOME (if it exists) and symlinks the .zshrc file from the dotfiles
 rm -rf $HOME/.zshrc
-ln -s $HOME/.dotfiles/shell/.zshrc $HOME/.zshrc
+ln -s $HOME/dotfiles/shell/.zshrc $HOME/.zshrc
 
-# Removes .p10k.zsh from $HOME (if it exists) and symlinks the .p10k.zsh file from the .dotfiles
+# Removes .p10k.zsh from $HOME (if it exists) and symlinks the .p10k.zsh file from the dotfiles
 rm -rf $HOME/.p10k.zsh
-ln -s $HOME/.dotfiles/shell/.p10k.zsh $HOME/.p10k.zsh
+ln -s $HOME/dotfiles/shell/.p10k.zsh $HOME/.p10k.zsh
 
-# Removes .hyper.js from $HOME (if it exists) and symlinks the .hyper.js file from the .dotfiles
+# Removes .hyper.js from $HOME (if it exists) and symlinks the .hyper.js file from the dotfiles
 rm -rf $HOME/.hyper.js
-ln -s $HOME/.dotfiles/shell/.hyper.js $HOME/.hyper.js
+ln -s $HOME/dotfiles/shell/.hyper.js $HOME/.hyper.js
 
 # Additional files symlinks
 rm -rf $HOME/.aliases
-ln -s $HOME/.dotfiles/shell/.aliases $HOME/
+ln -s $HOME/dotfiles/shell/.aliases $HOME/
 
 rm -rf $HOME/.functions
-ln -s $HOME/.dotfiles/shell/.functions $HOME/
+ln -s $HOME/dotfiles/shell/.functions $HOME/
 
 ./macos/set_defaults.sh
