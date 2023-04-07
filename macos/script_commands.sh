@@ -21,3 +21,5 @@ ln -s macos/script-commands/commands/dashboard/year-progress.sh macos/script-com
 
 ln -s macos/custom-scripts/default_google_chrome.sh macos/script-commands/_enabled-commands/
 ln -s macos/custom-scripts/maciej_google_chrome.sh macos/script-commands/_enabled-commands/
+
+chmod +x macos/script-commands/_enabled-commands/*.sh
