@@ -2,7 +2,8 @@
 alias hostfile="sudo nano /etc/hosts"
 alias sshconfig="nano ~/.ssh/config"
 alias copykey="command cat ~/.ssh/id_rsa.pub | pbcopy"
-alias sphp80="brew unlink php@7.4 && brew link --overwrite --force php"
+alias sphp80="brew unlink php && brew link --overwrite --force php@8.0"
+alias sphp81="brew unlink php && brew link --overwrite --force php@8.1"
 alias sphp74="brew unlink php && brew link --overwrite --force php@7.4"
 
 # Git

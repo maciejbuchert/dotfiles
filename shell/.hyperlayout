@@ -1,0 +1,43 @@
+{
+  "default": {
+    "entry": "vertical",
+    "layout": [
+      [
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ]
+      ]
+    ]
+  },
+  "m2": {
+    "entry": "vertical",
+    "layout": [
+      [
+        [
+          "cd ~/Documents/projekty/literia2-docker/app/literia2",
+          "cd ~/Documents/projekty/literia2-docker && mutagen-compose up -d --no-recreate && docker exec -it php bash"
+        ],
+        [
+          "",
+          "eks pod test"
+        ]
+      ]
+    ]
+  },
+  "prod": {
+    "entry": "vertical",
+    "layout": [
+      [
+        [
+          "prod-01 -t 'cd /var/www/html; bash'",
+          "prod-02 -t 'cd /var/www/html; bash'"
+        ]
+      ]
+    ]
+  }
+}

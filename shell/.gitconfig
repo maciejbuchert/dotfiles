@@ -1,12 +1,15 @@
 [user]
 	name = Maciej Buchert
+	email = <maciej@buchert.pl>
 [alias]
 	fc = !git fetch && git checkout
+	pf = !git pull && git fetch
+	b = "!git for-each-ref --sort='-authordate' --format='%(authordate)%09%(objectname:short)%09%(refname)' refs/heads | sed -e 's-refs/heads/--'"
+	la = "!git config -l | grep alias | cut -c 7-"
+
 [color]
     ui = auto
 [init]
 	defaultBranch = master
-[pull]
-    rebase = false
 [core]
-    autocrlf = input
+	autocrlf = input
